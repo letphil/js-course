@@ -16,3 +16,12 @@
 //   console.log(i);
 //   i __;
 // }
+
+// 2. make an array of numbers and iterate over the array using a while loop
+// let numbers = [1, 2, 3, 4, 5];
+// let i = 0;
+
+// while (i < ________) {
+//   console.log(numbers[i]);
+//   i++;
+// }
