@@ -22,13 +22,14 @@ object
 ```
 addition +
 subtraction -
-multiplication \*
+multiplication *
 division /
 modulus %
 increment ++
 decrement --
 assignment =
 comparison == === != !== > < >= <=
+
 logical && || !
 ternary ?:
 typeof
@@ -47,10 +48,14 @@ example of expressions:
 - 3 + 4
 ```
 
-## statements
-
 #### references:
 
 ```
 https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 ```
+
+## order
+
+    data-types
+    operators
+    objects-and-arrays

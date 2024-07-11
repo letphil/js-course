@@ -8,6 +8,7 @@
  *
  * console.log(1, 'string', true, { key: 'value' }, [1, 2, 3, 4, 5])
  *
+ *
  * other commonly used are
  * .warn
  * .error
@@ -18,18 +19,22 @@
  */
 
 // 1. console.log a string
-// console.log()
+// console.log("hello world");
 
 // 2. console.log a number
-// console.log()
+// console.log(8675309);
 
 // 3. console.log a boolean
-// console.log
+// console.log(false);
+
+// console.log("hello world", 8675309, false);
 
 /**
  * to capture data-types into a variable we must initiate a key word ->
  * var, const, let
  * followed by any text without spaces followed by equal sign then can assign any data type
+ *
+ * | const | shayAndPhil | = | true
  *
  * example -> var letPhil = 'coding is fun'
  *
@@ -40,7 +45,9 @@
  *
  * more common to use
  * const and let
- * const -> when variables do not get reassign
+ * const -> when variables do not get reassigned
+ *
+ *
  *  example ->
  *        const a = 'hello'
  *        a = 'goodbye'
@@ -60,6 +67,7 @@
 
 // 1. make variable
 // var ____ = ______
+// var korea = "good times";
 
 // 2. log variable
-// console.log(_____)
+// console.log("korea =", korea);

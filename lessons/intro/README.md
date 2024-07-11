@@ -7,7 +7,7 @@
 
 - it is used for web pages to add interactivity
 
-- it is also used i non-browser environments, in the server with Node.js and others
+- it is also used in non-browser environments, in the server with Node.js and others
 
 ```
 

@@ -11,18 +11,24 @@
  */
 
 // string
-// console.log(typeof "hello");
+console.log("typeof =", typeof "hello");
 
 // number
-// console.log(typeof 17);
+console.log("typeof =", typeof 17);
 
 // boolean
-// console.log(typeof true);
+console.log("typeof =", typeof true);
 
 // 1. make a variable using var that is a string
-
+var a = "that time";
 // 2. make a variable using const that is a number
+const b = 45;
 
 // 3. make a variable using let that is a boolean
-
+let c = true;
 // 4. reassign above variable into the opposite
+c = false;
+
+console.log(a, b, c);
+
+console.log(typeof a, typeof b, typeof c);
