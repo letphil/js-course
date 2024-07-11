@@ -35,6 +35,27 @@
  *
  * usage -> console.log('letPhil =', letPhil)
  *
+ * extra -> var is the older way to assign variables
+ * since es6 https://www.w3schools.com/js/js_es6.asp
+ *
+ * more common to use
+ * const and let
+ * const -> when variables do not get reassign
+ *  example ->
+ *        const a = 'hello'
+ *        a = 'goodbye'
+ *
+ * will throw error
+ *
+ * let -> allows for variables to be reassigned
+ *  example ->
+ *      let b = 'hello'
+ *      b = 'goodbye
+ *
+ * will be good
+ *
+ *
+ * it is good to use these to make your code more readable
  */
 
 // 1. make variable
