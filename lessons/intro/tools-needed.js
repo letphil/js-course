@@ -6,8 +6,6 @@
  * console.log can also take as many arguments or parameters needed
  * to do so:
  *
- * console.log(1, 'string', true, { key: 'value' }, [1, 2, 3, 4, 5])
- *
  *
  * other commonly used are
  * .warn
@@ -34,9 +32,6 @@
  * var, const, let
  * followed by any text without spaces followed by equal sign then can assign any data type
  *
- * | const | shayAndPhil | = | true
- *
- * example -> var letPhil = 'coding is fun'
  *
  * usage -> console.log('letPhil =', letPhil)
  *
@@ -67,7 +62,5 @@
 
 // 1. make variable
 // var ____ = ______
-// var korea = "good times";
 
 // 2. log variable
-// console.log("korea =", korea);

@@ -33,7 +33,11 @@
 ### Why is Javascript used
 
 ```
-- can make web pages more fun and interactive. It can also work on servers with Node.js.
+- the reason why javascript is used is because it is the only language that can be run in the browser
+
+- it is used to add interactivity to websites
+
+- it is used to connect to databases and serve data
 ```
 
 ### How is Javascript used.
@@ -41,7 +45,7 @@
 ```
 - it is used by the browser in <script> tags to add interactivity to websites
 
-- It is used in the server to serve data.
+- it is used with node.js to connect to databases and serve data
 
 ```
 
