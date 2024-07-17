@@ -8,11 +8,9 @@ letphil js-course
 ### 1st lesson
 
 ```
-in order
 
 intro
 data-types
-
 
 ```
 
