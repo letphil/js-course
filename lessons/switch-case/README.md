@@ -15,3 +15,15 @@ switch (expression) {
         // code block
 }
 ```
+
+const fruit = 'strawberry'
+
+switch(fruit) {
+case 'apple':
+console.log('fruit is apple')
+break
+case 'orange':
+console.log('fruit is orange')
+default:
+console.log('fruit is not in case and is ' + fruit)
+}
