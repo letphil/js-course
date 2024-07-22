@@ -7,7 +7,7 @@ functions in javascript are blocks of code that can be reused throughout a progr
 ### syntax:
 
 ```
-function functionName(parameters) {
+function functionName (parameter) {
     // code block
 }
 ```
@@ -15,8 +15,11 @@ function functionName(parameters) {
 ### example:
 
 ```
-function greet() {
-    console.log('hello world');
+/**
+    @name {string} - name of person
+*/
+function greet(name) {
+    console.log('hello ' + name)
 }
 
 greet();

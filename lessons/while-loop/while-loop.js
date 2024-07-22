@@ -12,16 +12,26 @@
 // 1. make a variable and compare it with a while loop
 // let i = 0;
 
-// while (i __ __) {
+// while (i < 15) {
 //   console.log(i);
-//   i __;
+//   i+=5;
 // }
 
 // 2. make an array of numbers and iterate over the array using a while loop
-// let numbers = [1, 2, 3, 4, 5];
-// let i = 0;
+let numbers = [1, 2, 3, 4, 5];
+let i = 0;
 
-// while (i < ________) {
-//   console.log(numbers[i]);
-//   i++;
-// }
+while (i < numbers.length) {
+  console.log(numbers[i]);
+  i++;
+}
+
+let keepGoing = true;
+
+while (keepGoing) {
+  console.log("im going");
+  if (i > 9) {
+    keepGoing = false;
+  }
+  i++;
+}
