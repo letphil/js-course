@@ -6,12 +6,53 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="container"></div>
+    <div id="container">
+      <h1>hello world</h1>
+      <button onclick="addPlayers()">press to add</button>
+    </div>
     <script>
+      // add image of player in object and display in html
+      const players = [
+        {
+          name: "Michael Jordan",
+          team: "Bulls",
+          // image: ""
+        },
+        {
+          name: "Charles Barkely",
+          team: "Suns",
+        },
+        {
+          name: "Allen Iverson",
+          team: "76ers",
+        },
+      ];
+
       const container = document.getElementById("container");
-      const h1 = document.createElement("h1");
-      h1.textContent = "Hello World";
-      container.appendChild(h1);
+
+      function addPlayers() {
+        for (let i = 0; i < players.length; i++) {
+          const div = document.createElement("div");
+          div.style = `
+            border: 1px solid black; 
+            margin-bottom: 3px; 
+            padding: 5px;;
+          `;
+          // refactor this to use document.createElement(h2)
+          // add the text inside the element than appendChild
+
+          // refactor this to use document.createElement(h3)
+          // add the text inside the element than appendChild
+
+          div.innerHTML = `
+            <h2>${players[i].name}</h2>
+            <h3>${players[i].team}</h3>
+            `;
+          // <img src='${players[i].image}' alt='player' />z
+
+          container.appendChild(div);
+        }
+      }
     </script>
   </body>
 </html>
