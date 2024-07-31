@@ -1,5 +1,6 @@
 // /**
 //  * functions
+//    https://developer.mozilla.org/en-US/docs/Glossary/Scope
 //  *
 //  * Functions are a way to group code together to perform a specific task.
 //  *
@@ -8,127 +9,80 @@
 //  * }
 //  */
 
-const dreamTeamPlayers = [9, 6, 4, 7, 11, 5, 13, 8, 14, 12, 15, 10];
-console.log("dreamTeamPlayers =", dreamTeamPlayers);
+// write a function called `greet` that takes a name as an argument and returns a greeting message
+let name = "";
 
-//— — <> — Function for Array Plus 5
-function arrayPlus5(array) {
-  for (let i = 0; i < array.length; i++) {
-    //if not an array, give error "This is not an array"
-    let plus5 = array[i] + 5;
-    console.log("array[i] + 5 =", plus5);
-  }
-  return;
-}
-// — — <> <> — TEST FUNCTION: arrayPlus5(array)
-// arrayPlus5(dreamTeamPlayers);
+const names = ["mark", "tom", "travis"];
 
-//— — <> — Function to sum array
-function arraySum(array) {
-  var arraySumTotal = 0;
-  for (let i = 0; i < array.length; i++) {
-    arraySumTotal += array[i];
-    console.log("arraySumTotal =", arraySumTotal);
-  }
-  return arraySum;
-}
-
-//— — <> <> — TEST FUNCTION: arraySum(array)
-// arraySum([9, 6, 4, 7, 11, 5, 13, 8, 14, 12, 15, 10]);
-
-//— — <> — Function to Find Odd and Even Number in Array then PUSH to appropriate Array
-function oddEvenPlacement(array) {
-  const oddPlayers = [];
-  const evenPlayers = [];
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] % 2) {
-      console.log("This Players Number is Odd =", array[i]);
-      oddPlayers.push(array[i]);
-      console.log("oddPlayers array =", oddPlayers);
-    } else {
-      console.log("This Players Number is Even =", array[i]);
-      evenPlayers.push(array[i]);
-      console.log("evenPlayers array =", evenPlayers);
-    }
-  }
-  return { oddPlayers, evenPlayers };
-}
-
-const oddEvenPlayers = oddEvenPlacement(dreamTeamPlayers);
-console.log("oddEvenPlayers =", oddEvenPlayers);
-
-const oddEvenPlayers2 = oddEvenPlacement([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-console.log("oddEvenPlayers2 =", oddEvenPlayers2);
-
-// // 1. create a function that logs "hello world" to the console
-// function greeting() {
-//   console.log("Hello World".toLowerCase());
-// }
-
-// // 2. create a function that logs "hello" and "world" to the console
-// function helloWorld() {
-//   console.log("hello");
-//   console.log("world");
-// }
-
-// // const hw = helloWorld();
-// // console.log("hw =", hw);
-
-// // 3. create a function that takes in a name and logs "hello, name" to the console
-// // const randomNumber = 0;
-
-// let randomNumFirstVal;
-// let randomNumSecondVal;
-// let randomNumThirdVal;
-
-// function randomNumber(l) {
-//   return Math.floor(Math.random() * l);
-// }
-
-// function createName() {
-//   const c = "qwrtpsdfghjklzxcvbnm";
-//   const v = "aeiou";
-
-//   randomNumFirstVal = randomNumber(c.length);
-//   randomNumSecondVal = randomNumber(v.length);
-//   randomNumThirdVal = randomNumber(c.length);
-
-//   return c[randomNumFirstVal] + v[randomNumSecondVal] + c[randomNumThirdVal];
-// }
-
-// console.log("createName =", createName());
-
-// /**
-//  *
-//  * @param {string} name - person's name
-//  */
-
-// // undefined null false
-// function nameGreet(name) {
-//   if (typeof name !== "string") return "please pass name as a string";
-//   return "hello, " + name;
-// }
-
-// const firstName = createName();
-// const secondName = createName();
-// const thirdName = createName();
-
-// const namesArr = [firstName, secondName, thirdName];
-
-// // for (let i = 0; i < namesArr.length; i++) {
-// //   console.log(nameGreet(namesArr[i]));
-// // }
-
-// // console.log(nameGreet(hw));
-// // nameGreet('shay');
-
-// // 4. make a function that takes an array of numbers and logs each number to the console
-// const bulls96 = [6, 23, 33, 13, 91];
-
-// function logArr(array) {
-//   for (let i = 0; i < array.length; i++) {
-//     console.log(array[i]);
+/**
+ *
+ * @param {string} name - name of person
+ * @returns "Hello {name}"
+ */
+// function greet(name) {
+//   function capitalizeName(n) {
+//     return n[0].toUpperCase() + n.slice(1);
 //   }
+
+//   const capitalizedName = capitalizeName(name);
+
+//   return "Hello " + capitalizedName;
 // }
 
-// logArr(bulls96);
+// for (let i = 0; i < names.length; i++) {
+//   names[i] = greet(names[i]);
+// }
+
+// console.log(names);
+// write a function that takes 2 numbers as arguments and returns the sum of those numbers
+
+// function addTwo(num1, num2) {
+//   return num1 + num2;
+// }
+
+// const sums = [addTwo(1, 2), addTwo(3, 4), addTwo(5, 6)];
+
+// for (let i = 0; i < sums.length; i++) {
+//   console.log(sums[i]);
+// }
+
+const arr = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  [10, 11, 12],
+];
+
+// make function that takes 3 parameters and adds the first 2 in array and subtracts the last
+// make new array with values from function from above with passing 'arr' as parameter
+
+let testArr = [[1, 2, 3]];
+
+// function calc(a, b, c) {
+//   // code here ->
+// }
+//Loop array,
+//Loop array of index[0] ~ i
+//Inner Loop index[0] + index [1] - index [2]
+
+// function loop, save the values of index
+
+function sumThenMinus(a, b, c) {
+  return a + b - c;
+}
+
+function firstLoop(array) {
+  let returnArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    // 1. [1, 2, 3]
+    console.log(i, " = ", arr[i]);
+    const currentArrayWithinArray = arr[i]; // [1, 2, 3]
+    returnArr.push(sumThenMinus(arr[i][0], arr[i][1], arr[i][2]));
+  }
+
+  return returnArr;
+}
+
+console.log(firstLoop(arr));
+
+console.log(arr[0][0]);
