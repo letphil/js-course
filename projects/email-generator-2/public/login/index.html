@@ -7,6 +7,40 @@
   </head>
   <body>
     <!-- login requires email and password -->
-    login
+    <div class="container">
+      <input id="email" placeholder="email@guest.com..." />
+      <input id="password" placeholder="********" type="password" />
+      <button id="login-button">login</button>
+    </div>
+    <script>
+      const email = document.getElementById("email"),
+        password = document.getElementById("password"),
+        loginButton = document.getElementById("login-button");
+
+      loginButton.addEventListener("click", login);
+
+      async function login() {
+        const [emailValue, passwordValue] = [email.value, password.value];
+        if (emailValue === "" || passwordValue === "") {
+          return alert("email and password not filled");
+        }
+
+        const payload = {
+          email: emailValue,
+          password: passwordValue,
+        };
+
+        const loginAttempt = await fetch("/auth/login", {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+
+        console.log("loginAttempt =", loginAttempt);
+      }
+    </script>
   </body>
 </html>

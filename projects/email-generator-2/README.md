@@ -33,3 +33,11 @@ Email template builder.
 ## nodemon
 
     - npm install nodemon -D
+
+## dotenv
+
+    - npm install dotenv -D
+
+## firebase
+
+    - npm install firebase

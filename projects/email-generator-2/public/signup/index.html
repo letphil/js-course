@@ -5,8 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <style>
+    body {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid black;
+      padding: 10px;
+      margin-top: 30%;
+    }
+
+    input {
+      margin: 5px 0 5px 0;
+    }
+  </style>
   <body>
     <!-- signup requires -> email , password, confirm password -->
-    signup
+    <div class="container">
+      <input id="email" placeholder="email@guest.com..." />
+      <input id="password" placeholder="********" type="password" />
+      <input id="confirm-password" placeholder="********" type="password" />
+      <button id="signup-button">signup</button>
+    </div>
+    <script>
+      const email = document.getElementById("email"),
+        password = document.getElementById("password"),
+        confirmPassword = document.getElementById("confirm-password"),
+        signupButton = document.getElementById("signup-button");
+
+      signupButton.addEventListener("click", signup);
+
+      async function signup() {
+        const [emailValue, passwordValue, confirmPasswordValue] = [
+          email.value,
+          password.value,
+          confirmPassword.value,
+        ];
+
+        if (
+          emailValue === "" ||
+          passwordValue === "" ||
+          confirmPasswordValue === ""
+        ) {
+          return alert("fill in values...");
+        } else if (passwordValue !== confirmPasswordValue) {
+          return alert("check password and confirm password");
+        } else {
+          const payload = {
+            email: emailValue,
+            password: passwordValue,
+          };
+
+          console.log("payload =", payload);
+
+          const signupAttempt = await fetch("/auth/signup", {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+          });
+
+          const toJson = await signupAttempt.json();
+
+          console.log("toJson =", toJson);
+        }
+      }
+    </script>
   </body>
 </html>
