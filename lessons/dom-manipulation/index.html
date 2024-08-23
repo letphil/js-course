@@ -3,56 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>MANIPULATE DOM</title>
   </head>
+  <style>
+    #container {
+      display: flex;
+      flex: 1;
+    }
+
+    .columns {
+      flex: 1;
+      border: 1px solid black;
+      height: 100vh;
+      overflow: scroll;
+    }
+
+    .cards {
+      height: 300px;
+      width: 90%;
+      border: 1px solid dodgerblue;
+      margin: auto;
+    }
+  </style>
   <body>
     <div id="container">
-      <h1>hello world</h1>
-      <button onclick="addPlayers()">press to add</button>
+      <div class="columns"></div>
+      <div class="columns"></div>
     </div>
     <script>
-      // add image of player in object and display in html
-      const players = [
-        {
-          name: "Michael Jordan",
-          team: "Bulls",
-          // image: ""
-        },
-        {
-          name: "Charles Barkely",
-          team: "Suns",
-        },
-        {
-          name: "Allen Iverson",
-          team: "76ers",
-        },
-      ];
-
       const container = document.getElementById("container");
+      const leftColumn = document.querySelector("#container > :nth-child(1)");
+      const rightColumn = document.querySelector("#container > :nth-child(2)");
 
-      function addPlayers() {
-        for (let i = 0; i < players.length; i++) {
-          const div = document.createElement("div");
-          div.style = `
-            border: 1px solid black; 
-            margin-bottom: 3px; 
-            padding: 5px;;
-          `;
-          // refactor this to use document.createElement(h2)
-          // add the text inside the element than appendChild
+      const leftCards = [0, 1, 2, 3, 4]; // [...Array(5).keys()]
+      const rightCards = [];
 
-          // refactor this to use document.createElement(h3)
-          // add the text inside the element than appendChild
+      function makeCard(index) {
+        const card = document.createElement("div");
+        card.innerText = index;
+        card.setAttribute("class", "cards");
+        const moveRightButton = document.createElement("button");
+        moveRightButton.addEventListener("click", function () {
+          rightCards.push(index);
+          rightColumn.appendChild(makeCard(index));
+          leftCards.splice(index, 1);
+          leftColumn.innerHTML = "";
+          leftCards.forEach((i) => {
+            const card = makeCard(i);
+            leftColumn.appendChild(card);
+          });
+        });
+        card.appendChild(moveRightButton);
 
-          div.innerHTML = `
-            <h2>${players[i].name}</h2>
-            <h3>${players[i].team}</h3>
-            `;
-          // <img src='${players[i].image}' alt='player' />z
-
-          container.appendChild(div);
-        }
+        return card;
       }
+
+      leftCards.forEach((i) => {
+        const card = makeCard(i);
+        leftColumn.appendChild(card);
+      });
     </script>
   </body>
 </html>
