@@ -6,76 +6,19 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>helo world</h1>
-  </body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Urgent Email</title>
-  </head>
-  <body>
-    <div id="mainContainer">
-      <div id="mainInfo">
-        <div id="cacInfo">
-          <label for="cacName">CAC Name:</label>
-          <input type="text" id="cacName" name="cacName" />
-        </div>
-        <div id="clientInfo">
-          <label for="clientName">Client Name:</label>
-          <input type="text" id="clientName" name="clientName" />
-        </div>
-      </div>
-      <div id="subInfo">
-        <div id="instructerInfo">
-          <labl for="instructor">Instructor:</labl>
-          <select name="instructor" id="instructor">
-            <!--Find default for drop down menu-->
-            <option value="choose">Choose</option>
-            <option value="Phil">Phil</option>
-            <option value="Ted">Ted</option>
-            <option value="Cindy">Cindy</option>
-          </select>
-        </div>
-        <div id="sessionInfo">
-          <label for="timeName">Session Time:</label>
-          <input
-            type="text"
-            class="emailTemplateValues"
-            id="timeName"
-            name="timeName"
-          />
-        </div>
-        <button onclick="sendNames()">Create!</button>
-      </div>
-      <div id="subjectBox">
-        Subject:
-        <div>
-          [Urgent] Your session with <span id="instructorNameSub"></span>
-        </div>
-        <button>Copy Subject</button>
-      </div>
-      <div id="emailBox">
-        <div>Dear <span id="clientNameEmail"></span>,</div>
-        <div>This is <span id="cacNameEmail"></span> from the help center</div>
-        <div>
-          This email is to remind you of a session you had scheulde for today at
-          <span id="timeNameEmail"></span>.
-        </div>
-        <div>
-          Your instructor, <span id="instructorNameEmail"></span> is waiting
-          online for your attendance.
-        </div>
-        <div>Please use the following link to join the session</div>
-        <div id="linkBox"></div>
-        <button>Copy Email</button>
-      </div>
-    </div>
+    <button class="nav-buttons">templates</button>
+    <button class="nav-buttons">create template</button>
+    <script>
+      const [templatesButton, createTemplateButton] =
+        document.querySelectorAll(".nav-buttons");
 
-    <script src="main.js"></script>
+      function goTo(path) {
+        window.location.href = "http://localhost:8888/" + path;
+      }
+
+      createTemplateButton.addEventListener("click", function () {
+        goTo("/create-template");
+      });
+    </script>
   </body>
 </html>

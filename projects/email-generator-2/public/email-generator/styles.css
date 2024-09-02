@@ -1,0 +1,22 @@
+#mainContainer {
+  border: 2px solid black;
+  width: 50%;
+  margin: auto;
+}
+
+#mainInfo {
+  margin: 2%;
+}
+#subInfo {
+  margin: 2%;
+}
+
+#subjectBox {
+  border: 2px solid blue;
+  margin: 2%;
+}
+
+#emailBox {
+  border: 2px solid purple;
+  margin: 2%;
+}

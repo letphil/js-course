@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #legend-container {
+      margin: 10px;
+    }
+    .value-map-input-container {
+      margin: 10px;
+    }
+  </style>
+  <body>
+    <div>
+      <div>
+        <div id='value-map-container'>
+          <div class="value-map-input-container">
+            <input class='value-map-input-key' />
+            <input class='value-map-input-value' />
+          </div>
+        </div>
+        <button id="add-value">add value map</button>
+      </div>
+    
+
+    <textarea class="template-generator" placeholder="header"></textarea>
+    <textarea class="template-generator" placeholder="body"></textarea>
+    <textarea class="template-generator" placeholder="footer"></textarea>
+    <div>
+      <input type="text" />
+    </div>
+
+    <script>
+      const [header, body, footer] = document.querySelectorAll(
+        ".template-generator"
+      );
+      const addValueButton = document.getElementById("add-value")
+      const valueMapContainer = document.getElementById("value-map-container")
+
+      addValueButton.addEventListener('click', function() {
+        const div = document.createElement("div")
+        div.setAttribute("class", 'value-map-input-container')
+        div.innerHTML = `
+          <input class='value-map-input-key' />
+          <input class='value-map-input-value' />
+        `
+
+        
+
+        valueMapContainer.appendChild(div)
+      })
+
+      
+
+
+
+    </script>
+  </body>
+</html>

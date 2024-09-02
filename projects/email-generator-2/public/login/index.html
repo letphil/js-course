@@ -39,7 +39,13 @@
           body: JSON.stringify(payload),
         });
 
-        console.log("loginAttempt =", loginAttempt);
+        const json = await loginAttempt.json();
+
+        if (json.user.user.email !== emailValue) {
+          return alert("please check email");
+        }
+
+        window.location.href = "http://localhost:8888/";
       }
     </script>
   </body>

@@ -6,7 +6,7 @@ const express = require("express");
 const path = require("path");
 // import firebaseApp
 const firebaseApp = require("./firebase");
-console.log("firebaseApp =", firebaseApp);
+// console.log("firebaseApp =", firebaseApp);
 
 const authRouter = require("./routes/auth");
 
